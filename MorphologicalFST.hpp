@@ -53,8 +53,10 @@ public:
     [[nodiscard]] const std::vector<State>& states() const noexcept;
     [[nodiscard]] const std::vector<Transition>& transitions() const noexcept;
     [[nodiscard]] const std::vector<MorphologicalRule>& rules() const noexcept;
+    [[nodiscard]] std::size_t root_count() const noexcept;
 
     [[nodiscard]] std::size_t memory_estimate_bytes() const noexcept;
+
 
 private:
     struct SymbolSpan {

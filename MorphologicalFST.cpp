@@ -245,7 +245,12 @@ MorphologicalFST::rules() const noexcept {
     return rules_;
 }
 
+std::size_t MorphologicalFST::root_count() const noexcept {
+    return roots_.size();
+}
+
 std::size_t MorphologicalFST::memory_estimate_bytes() const noexcept {
+
     std::size_t bytes = sizeof(*this);
 
     bytes += states_.capacity() * sizeof(State);
